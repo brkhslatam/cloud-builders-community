@@ -12,5 +12,6 @@ RUN apk add --no-cache python3 py3-pip openjdk11-jre bash && \
 
 ADD firebase.bash /usr/bin
 RUN chmod +x /usr/bin/firebase.bash
+ENV FUNCTIONS_DISCOVERY_TIMEOUT 50
 
 ENTRYPOINT [ "/usr/bin/firebase.bash" ]
